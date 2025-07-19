@@ -1,0 +1,290 @@
+/* src/components/StitchDesign.css */
+
+* {
+  box-sizing: border-box;
+}
+
+.stitch-design {
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.main-container {
+  background-color: #121714;
+  min-height: 844px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.content-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  padding: 16px 16px 8px 16px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-icon, .share-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-icon img, .share-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Profile Section */
+.profile-section {
+  padding: 16px;
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.profile-image {
+  width: 128px;
+  height: 128px;
+  border-radius: 64px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.profile-info {
+  text-align: center;
+}
+
+.profile-name {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 4px 0;
+  line-height: 28px;
+}
+
+.profile-description {
+  font-size: 16px;
+  color: #9eb8a8;
+  margin: 0 0 4px 0;
+  line-height: 24px;
+}
+
+.profile-followers {
+  font-size: 16px;
+  color: #9eb8a8;
+  margin: 0;
+  line-height: 24px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  max-width: 480px;
+}
+
+.follow-button, .message-button {
+  flex: 1;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  min-width: 84px;
+}
+
+.follow-button {
+  background-color: #29382e;
+  color: #ffffff;
+}
+
+.message-button {
+  background-color: #38e07a;
+  color: #121714;
+}
+
+/* Navigation Tabs */
+.nav-tabs {
+  border-bottom: 1px solid #3d5245;
+  padding: 0 16px;
+}
+
+.nav-tabs-content {
+  display: flex;
+  gap: 32px;
+  padding-bottom: 1px;
+}
+
+.nav-tab {
+  padding: 16px 0;
+  font-size: 14px;
+  font-weight: bold;
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-tab.active {
+  color: #ffffff;
+}
+
+.nav-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #e5e8eb;
+}
+
+.nav-tab:not(.active) {
+  color: #9eb8a8;
+}
+
+/* Track List */
+.track-list {
+  flex: 1;
+}
+
+.track-item {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.track-info {
+  flex: 1;
+  max-width: 228px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.track-label {
+  font-size: 14px;
+  color: #9eb8a8;
+  margin: 0;
+  line-height: 21px;
+}
+
+.track-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+  line-height: 20px;
+}
+
+.track-details {
+  font-size: 14px;
+  color: #9eb8a8;
+  margin: 0;
+  line-height: 21px;
+}
+
+.track-cover {
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  background-color: #1c2621;
+  border-top: 1px solid #29382e;
+}
+
+.nav-bar {
+  display: flex;
+  padding: 9px 16px 12px 16px;
+  gap: 8px;
+}
+
+.nav-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.nav-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.nav-label {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.nav-item.active .nav-label {
+  color: #ffffff;
+}
+
+.nav-item:not(.active) .nav-label {
+  color: #9eb8a8;
+}
+
+.bottom-spacer {
+  background-color: #1c2621;
+  height: 20px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .action-buttons {
+    flex-direction: column;
+  }
+  
+  .nav-tabs-content {
+    gap: 16px;
+  }
+  
+  .track-item {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .track-info {
+    max-width: 100%;
+  }
+}
